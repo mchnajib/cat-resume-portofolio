@@ -1,0 +1,312 @@
+/* html{
+    zoom: 0.7;
+} */
+body{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header{
+    background: rgb(174,58,180);
+    background: linear-gradient(
+        90deg, 
+        #40c9ff 0%, 
+        #e81cff 50%, 
+        #ffd917 100%);
+    padding: 20px;
+}
+.header-container{
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.content-holder{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.img-profile{
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 100%;
+    box-shadow: 5px 5px 10px 2px #73277796;
+    transition: all;
+    transition-duration: 0.3s;
+}
+.img-profile:hover{
+    transform: scale(1.1);
+}
+.holder-img{
+    flex: 1;
+    text-align: center;
+}
+.holder-detail{
+    flex: 2;
+}
+.name-profile{
+    font-size: 48px;
+    color: white;
+    font-weight: 600;
+}
+.title-profile{
+    color: white;
+    font-size: 36px;
+}
+.button{
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 15px 0 0;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all;
+    transition-duration: 0.3s;
+}
+.button.download{
+    /* text-decoration: none; */
+    background-color: white;
+    color: rgb(43, 43, 43);
+    cursor: pointer;
+}
+.button.contact{
+    background-color: #37bc9b;
+    color: white;
+    cursor: pointer;
+}
+.button.linkedin{
+    background-color: #0077b5;
+    color: white;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.1);
+}
+
+/* Content */
+
+/* About  Me */
+.sub-content{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+    color: #262626;
+    padding: 25px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+/* Profesional Skills */
+.bar-container{
+    width: 100%;
+    height: 20px;
+    background-color: #e7e7e7;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.bar-filling{
+    /* position: absolute; */
+    height: 100%;
+    border-radius: 15px;
+    left: 0;
+    top: 0;
+    animation: wipe-in 1.5s ease-in-out forwards;
+}
+.purple{
+    background-color: #e23fbf;
+    width: 90%;
+}
+.red{
+    background-color: #ff3e29;
+    width: 70%;
+}
+.yellow{
+    background-color: #f1c40f;
+    width: 55%;
+}
+.blue{
+    background-color: #3b5998;
+    width: 85%;
+}
+@keyframes wipe-in {
+    0% {
+    width: 0;
+    }
+    100% {
+    width: var('--fill-width');
+    }
+}
+
+
+/* Education */
+.education-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-list li {
+    font-size: 20px;
+    padding: 25px;
+    background-color: #f4f4f4;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.education-degree {
+    font-weight: bold;
+    color: #37bc9b;
+}
+
+.education-school {
+    font-weight: 500;
+    color: #262626;
+}
+
+.education-duration {
+    font-style: italic;
+    color: #7a7a7a;
+}
+
+.education-description {
+    display: block;
+    margin-top: 10px;
+    color: #262626;
+    text-align: justify;
+}
+
+
+/* Working Experience */
+.work-post{
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    color: #37bc9b;
+}
+ul.work-exp li{
+    font-size: 20px;
+    padding: 25px;
+    list-style-type: square;
+}
+ul.work-exp li:nth-child(odd){
+    /* padding-top: 0; */
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+span strong{
+    font-weight: bold;
+}
+
+/* Footer */
+footer{
+    margin-top: 50px;
+    background-color: #7a7a7a;
+    text-align: center;
+}
+.footer-holder{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.footer-name{
+    font-size: 20px;
+    font-weight: 400px;
+    color: white;
+}
+
+
+/* Responsive Design */
+/* Tablet */
+@media (max-width: 1024px) {
+    /* Header */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .holder-detail {
+        margin-top: 20px;
+    }
+
+    .name-profile {
+        font-size: 36px;
+    }
+
+    .title-profile {
+        font-size: 24px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    /* Content */
+    .content-holder {
+        padding: 0 20px;
+    }
+
+    .sub-content {
+        font-size: 18px;
+    }
+
+    /* Professional Skills */
+    .skill-bar h3 {
+        font-size: 18px;
+    }
+
+    /* Working Experience */
+    .work-exp li {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    /* Education */
+    .education-list li {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+    /* Header */
+    .name-profile {
+        font-size: 28px;
+    }
+
+    .title-profile {
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    /* Content */
+    .sub-content {
+        font-size: 16px;
+    }
+
+    /* Professional Skills */
+    .skill-bar h3 {
+        font-size: 16px;
+    }
+
+    /* Working Experience */
+    .work-exp li {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* Education */
+    .education-list li {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
