@@ -1,6 +1,6 @@
-/* html{
-    zoom: 0.7;
-} */
+html{
+    zoom: 0.9;
+}
 body{
     background-color: white;
     padding: 0;
@@ -17,6 +17,9 @@ header{
         #e81cff 50%, 
         #ffd917 100%);
     padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .header-container{
     display: flex;
