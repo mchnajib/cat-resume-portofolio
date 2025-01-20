@@ -17,6 +17,7 @@ header{
         #e81cff 50%, 
         #ffd917 100%);
     padding: 20px;
+    /* sticky header */
     position: sticky;
     top: 0;
     z-index: 1000;
